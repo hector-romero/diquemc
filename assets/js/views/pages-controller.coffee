@@ -9,7 +9,9 @@ define "PagesController", (require) ->
         @trigger 'finishLoading'
         @$el.html data
       error = =>
-        @trigger 'errorLoading',e
+        console.log "error"
+        @$el.html "404: Not Found"
+        @trigger 'errorLoading',  {message: "Section not found", code: 404}
 
       $.ajax("assets/#{@section}.html").then success,error
 

@@ -1,27 +1,28 @@
 <div class="content">
 
 </div>
+<br>
 <h2>Secciones</h2>
-<a href="comunidad">
+<a href="#comunidad">
     <div class="service-half hyper">
         <div class="caption">COMUNIDAD</div>
         <div class="caption small">Mira las Reglas!</div>
     </div>
 
 </a>
-<a href="noticias">
+<a href="#noticias">
     <div class="service-half biz" style="margin-left:10px;">
         <div class="caption">NOTICIAS</div>
         <div class="caption small">Ve las últimas novedades!</div>
     </div>
 </a>
-<a href="unirse">
+<a href="#unirse">
     <div class="service-half forum">
         <div class="caption">UNIRSE</div>
         <div class="caption small">Se parte de nuestra Comunidad!</div>
     </div>
 </a>
-<a href="donacion">
+<a href="#donacion">
     <div class="service-half soon" style="margin-left:10px;">
         <div class="caption">DONACIÓN VIP</div>
         <div class="caption small">Colaborando obtenes beneficios!</div>

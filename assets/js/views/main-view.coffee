@@ -32,16 +32,16 @@ define "MainView", (require) ->
         @current = view
         @listenTo @current, 'startLoading', => @showSpinner()
         @listenTo @current, 'finishLoading', => @hideSpinner()
-        @listenTo @current, 'errorLoading',(e) =>
+        @listenTo @current, 'errorLoading',(e = "Error") =>
           @hideSpinner()
-          alert "Invalid page"
+#          console.log "error e"
+#          alert e.message || e
 
       showPage: (view) ->
-        @removeCurrentView()
-        @current = view
-        @header.setActive view.section
-        view.render()
-        @$content.html view.$el
+        @setCurrentView(view)
+        @header.setActive @current.section
+        @current.render()
+        @$content.html @current.$el
 
       render: ->
         @header = new Header el: @$(".header-container")[0]
