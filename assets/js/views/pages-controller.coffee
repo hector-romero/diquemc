@@ -1,3 +1,5 @@
+#= require views/templates/404
+
 define "PagesController", (require) ->
   Backbone = require("Backbone")
   $ = require("jquery")
@@ -10,7 +12,7 @@ define "PagesController", (require) ->
         @$el.html data
       error = =>
         console.log "error"
-        @$el.html "404: Not Found"
+        @$el.html JST["views/templates/404"]()
         @trigger 'errorLoading',  {message: "Section not found", code: 404}
 
       $.ajax("assets/#{@section}.html").then success,error

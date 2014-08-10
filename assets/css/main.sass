@@ -101,7 +101,27 @@ li
     width: 900px
     min-height: 100%
     padding-top: 20px
+    position: relative
+    .content, .spinner        
+        min-height: 400px
+    .spinner
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        background:
+            image: url(loading.gif)
+            position: center
+            repeat: no-repeat
+        z-index: 100
+        display: none
 
+    .error404
+        height: 400px
+        background:
+            repeat: no-repeat
+            position: center
+            image: url(404.png)
 h1
     font-size: 40px
     text-transform: uppercase

@@ -16,10 +16,10 @@ define "MainView", (require) ->
     class MainView extends Backbone.View
 
       showSpinner: ->
-        console.log "Showing spinner"
+        @$(".spinner").fadeIn("fast")
 
       hideSpinner: ->
-        console.log "Hiding spinner"
+        @$(".spinner").fadeOut("slow")
 
       removeCurrentView: ->
         return unless @current
