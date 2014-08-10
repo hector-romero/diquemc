@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title><% app_name %></title>
+    <!-- Version <%= get_version %> -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no">
+
+    <script>
+        window.APP_VERSION = "<%= get_version %>";
+        var load = function(){
+            window.app.init();
+        }
+    </script>
+    <%= stylesheet_tag main_css %>
+</head>
+<body onload="load()">
+  <%= javascript_tag main_js %>
+</body>
+</html>
