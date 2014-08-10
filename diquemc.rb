@@ -3,10 +3,10 @@ require 'bundler'
 Bundler.require :default, :app, :assets
 
 class App < Sinatra::Base
-  set :app_name,           'DiqueMC'
+  set :app_name,           'Dique MC'
   set :assets, Sprockets::Environment.new(root)
   set :digest_assets,   false
-  set :version, '0.0.0'
+  set :version, '0.1.0'
   set :protection,          :except => [:json_csrf]
   set :recompile_views,     settings.development?
   set :assets_prefix,       'assets'
