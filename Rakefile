@@ -56,7 +56,6 @@ def build output_dir, production
   build_index output_dir
   build_changelog output_dir
   build_htaccess output_dir
-  build_service output_dir
 end
 
 task :build_assets, [:output_dir] do |task, args|
@@ -70,7 +69,7 @@ end
 desc 'Builds the static application.'
 task :build, [:output_dir] do |task, args|
   output_dir = args[:output_dir] || 'build'
-  build output_dir,args[]
+  build output_dir,args[:production]
 end
 
 desc 'Builds the static application not minified'

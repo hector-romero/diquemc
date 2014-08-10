@@ -1,6 +1,6 @@
 #= require views/pages-controller
 
-define "Router", (require)->
+define "Router",['require','Backbone','PagesController'], (require)->
   Backbone = require("Backbone")
   PagesController = require("PagesController")
 

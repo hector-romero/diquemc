@@ -5,8 +5,8 @@
 #= require views/main-view
 #= require router
 
-define "app",(require) ->
-    $ = require("jquery");
+define "app",['require','jquery','Backbone','MainView','Router'],(require) ->
+    $ = require("jquery")
     MainView = require("MainView")
     Router = require("Router")
     Backbone = require("Backbone")

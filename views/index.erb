@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Version <%= get_version %> -->
-    <title><% app_name %></title>
+    <title><%= app_name %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="<%= app_name %>">
@@ -17,8 +17,7 @@
         window.APP_VERSION = "<%= get_version %>";
         var load = function(){
             require(['require','app'],function (require) {
-                //Notice the space between require and the arguments.
-                window.app = require ('app');
+                window.app = require('app');
                 app.init();
             });
         }
@@ -49,13 +48,16 @@
         </div>
         <div class="image">
             <div class="social fb">
-                <a href="https://www.facebook.com/DiqueMC?ref=hl" target="_blank">
+                <a href="https://www.facebook.com/DiqueMC" target="_blank">
                     <img src="assets/fb.png">
                 </a>
             </div>
 
         </div>
-        <div class="container"></div>
+        <div class="container">
+            <div class="content"></div>
+            <div class="spinner"></div>
+        </div>
     </center>
     <%= javascript_tag main_js %>
 </body>

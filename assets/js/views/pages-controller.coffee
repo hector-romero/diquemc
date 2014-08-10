@@ -1,6 +1,6 @@
 #= require views/templates/404
 
-define "PagesController", (require) ->
+define "PagesController", ['require','jquery','Backbone'],(require) ->
   Backbone = require("Backbone")
   $ = require("jquery")
   class Page extends Backbone.View
@@ -18,7 +18,7 @@ define "PagesController", (require) ->
       $.ajax("assets/#{@section}.html").then success,error
 
     render: ->
-      @$el.html "Loading: #{@section}"
+      @$el.html ""
       @load()
       @$el
 
