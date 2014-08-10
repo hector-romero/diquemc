@@ -1,77 +1,31 @@
-<center>
-    <div class="top">
-        <div class="top-container">
-            <div class="ip">
-                IP: mc.diquemc.com
-            </div>
-            <div class="logo">
-                <a href="#"><img src="images/logo1.png"/></a>
-            </div>
-        </div>
-    </div>
-    <div class="header">
-        <div class="header-container">
-            <ul>
- <li><a href="descargas">ÚTILES</a></li>
- <li><a href="donacion">DONACIÓN VIP</a></li>
-                <li><a href="unirse">UNIRSE</a></li>
-                <li><a href="noticias">NOTICIAS</a></li>
-                <li><a href="comunidad">COMUNIDAD</a></li>
-                <li class="selected"><a href="#">Home</a></li>
-</ul>
-        </div>
-    </div>
-        <div class="image">
+<div class="content">
+
+</div>
+<h2>Secciones</h2>
+<a href="comunidad">
+    <div class="service-half hyper">
+        <div class="caption">COMUNIDAD</div>
+        <div class="caption small">Mira las Reglas!</div>
     </div>
 
-    <div class="social fb">
-        <a href="https://www.facebook.com/DiqueMC?ref=hl" target="_blank">
-            <img src="images/fb.png">
-        </a>
+</a>
+<a href="noticias">
+    <div class="service-half biz" style="margin-left:10px;">
+        <div class="caption">NOTICIAS</div>
+        <div class="caption small">Ve las últimas novedades!</div>
     </div>
-    <div class="container">
-        <h2>BIENVENIDO a Dique MC!</h2>
-        <p>Dique MC es un servidor Argentino Fundado el 31 de Julio del 2014.</p>
-<p>Hemos realizado este servidor con mucho entusiasmo, cariño y esfuerzo para que junto a ustedes podamos compartir muchos momentos de risas, sorpresas y nuevos amigos.</p>
-<p>Este servidor cuenta con un Mundo Survival, Economía, PVP, Sistema de Facciones y Minijuegos. (y muchos futuros plugins).</p>
-<p>Desde ya les agradecemos por visitarnos y elegirnos.</p><br>
-<h3>Conformación Del Staff:</h3>
-<p>Administrador Lider: Hector22x<br>
-Administradora: LoreBeatle (Gaia)<br>
-Staff: Nachooo7<br>
-Staff: Kasume<br>
-Staff: chaverogaymer<br> <br>
-Siempre a tu disposición </p>
-
-</p>
-        <br />
-        <h2>Secciones</h2>
-        <a href="comunidad">
-            <div class="service-half hyper">
-                <div class="caption">COMUNIDAD</div>
-                <div class="caption small">Mira las Reglas!</div>
-            </div>
-
-        </a>
-        <a href="noticias">
-            <div class="service-half biz" style="margin-left:10px;">
-                <div class="caption">NOTICIAS</div>
-                <div class="caption small">Ve las últimas novedades!</div>
-            </div>
-        </a>
-        <a href="unirse">
-            <div class="service-half forum">
-                <div class="caption">UNIRSE</div>
-                <div class="caption small">Se parte de nuestra Comunidad!</div>
-            </div>
-        </a>
-        <a href="donacion">
-            <div class="service-half soon" style="margin-left:10px;">
-                <div class="caption">DONACIÓN VIP</div>
-                <div class="caption small">Colaborando obtenes beneficios!</div>
-            </div>
-        </a>
-        <div class="clear"></div>
-
+</a>
+<a href="unirse">
+    <div class="service-half forum">
+        <div class="caption">UNIRSE</div>
+        <div class="caption small">Se parte de nuestra Comunidad!</div>
     </div>
-</center>
+</a>
+<a href="donacion">
+    <div class="service-half soon" style="margin-left:10px;">
+        <div class="caption">DONACIÓN VIP</div>
+        <div class="caption small">Colaborando obtenes beneficios!</div>
+    </div>
+</a>
+<div class="clear"></div>
+
