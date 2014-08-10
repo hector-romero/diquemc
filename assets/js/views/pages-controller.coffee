@@ -18,7 +18,7 @@ define "PagesController", ['require','jquery','Backbone'],(require) ->
       $.ajax("assets/#{@section}.html").then success,error
 
     render: ->
-      @$el.html "Loading: #{@section}"
+      @$el.html ""
       @load()
       @$el
 
