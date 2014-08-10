@@ -1,7 +1,7 @@
 #= require views/templates/main
 #= require views/templates/header
 
-define "MainView", (require) ->
+define "MainView", ['require','Backbone'],(require) ->
     Backbone = require("Backbone")
 
     class  Header extends Backbone.View
