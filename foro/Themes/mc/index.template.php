@@ -98,8 +98,8 @@ function template_html_above()
 //	if ($context['right_to_left'])
 //		echo '
 //	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
-    echo '
-	    <link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/main.css" />';
+//    echo '
+//	    <link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/main.css" />';
 
 
 	// Here comes the JavaScript bits!
