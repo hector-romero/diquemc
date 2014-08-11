@@ -84,7 +84,7 @@ function template_html_above()
 <html xmlns="http://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '>
 <head>';
 
-	// The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
+//	 The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
 
@@ -95,9 +95,12 @@ function template_html_above()
 	<link rel="stylesheet" type="text/css" href="', $settings['default_theme_url'], '/css/', $cssfix, '.css" />';
 
 	// RTL languages require an additional stylesheet.
-	if ($context['right_to_left'])
-		echo '
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
+//	if ($context['right_to_left'])
+//		echo '
+//	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
+    echo '
+	    <link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/main.css" />';
+
 
 	// Here comes the JavaScript bits!
 	echo '
