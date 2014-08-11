@@ -31,13 +31,14 @@ table
 }
 
 /* Set a fontsize that will look the same in all browsers. */
-body
-{
-	background: #E9EEF2 url(../images/theme/bg.png);
-	font: 78%/130% "Verdana", "Arial", "Helvetica", sans-serif;
-	margin: 0 auto;
-	padding: 15px 0;
-}
+/*body*/
+/*{*/
+	/*background: #E9EEF2 url(../images/theme/bg.png);*/
+	/*font: 78%/130% "Verdana", "Arial", "Helvetica", sans-serif;*/
+	/*margin: 0 auto;*/
+	/*padding: 15px 0;*/
+    /*min-width: 1135px*/
+/*}*/
 
 /* Help popups require a different styling of the body element. */
 body#help_popup
@@ -77,7 +78,7 @@ form
 
 input, button, select, textarea
 {
-	font: 95%/115% verdana, Helvetica, sans-serif;
+	/*font: 95%/115% verdana, Helvetica, sans-serif;*/
 	color: #000;
 	background: #fff;
 	border: 1px solid #7f9db9;
@@ -1333,24 +1334,34 @@ ul#navigation li
 /* the framing graphics */
 #header
 {
-	background: url(../images/theme/main_block.png) #fefefe no-repeat 0 -480px;
-	padding-left: 20px;
+	/*background: url(../images/theme/main_block.png) #fefefe no-repeat 0 -480px;*/
+	/*padding-left: 20px;*/
+    /*margin-top: 3px;*/
+    background: rgba(0,0,0,0.3);
 }
 #header div.frame
 {
-	background: url(../images/theme/main_block.png) no-repeat 100% -480px;
+	/*background: url(../images/theme/main_block.png) no-repeat 100% -480px;*/
+
 	display: block;
-	padding: 5px 20px 1em 0;
+	/*padding: 5px 20px 1em 0;*/
+    padding: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* the content section */
 #content_section
 {
-	background: #FFFFFF url(../images/theme/frame_repeat.png) repeat-y top left;
+	/*background: #FFFFFF url(../images/theme/frame_repeat.png) repeat-y top left;*/
+	background: #FFFFFF;
 	padding-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 #content_section div.frame
 {
-	background: url(../images/theme/frame_repeat.png) repeat-y top right;
+	/*background: url(../images/theme/frame_repeat.png) repeat-y top right;*/
 	display: block;
 	padding: 0 20px 0 0;
 }
@@ -1391,13 +1402,15 @@ img#upshrink
 /* ..so does the SMF logo */
 img#smflogo
 {
-	margin-left: 1em;
+	/*margin-left: 1em;*/
 }
 /* the upper_section, float the two each way */
 #upper_section
 {
+    color: #f0f6f0;
 	padding: 5px;
 	margin-bottom: 1.5em;
+    display: block!important;
 }
 #upper_section ul li.greeting
 {

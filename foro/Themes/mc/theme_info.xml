@@ -4,11 +4,11 @@
 	<id>smf:mc</id>
 	<version>2.0.8</version>
 	<!-- Theme name, used purely for aesthetics. -->
-	<name>mc</name>
+	<name>DiqueMC</name>
 	<!-- Author: your email address or contact information. The name attribute is optional. -->
-	<author name="Simple Machines">info@simplemachines.org</author>
+	<author name="HR">hector22x@diquemc.com</author>
 	<!-- Website... where to get updates and more information. -->
-	<website>http://www.simplemachines.org/</website>
+	<website>http://diquemc.com/</website>
 	<!-- Template layers to use, defaults to "html,body". -->
 	<layers>html,body</layers>
 	<!-- Templates to load on startup. Default is "index". -->

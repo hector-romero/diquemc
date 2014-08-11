@@ -86,6 +86,7 @@ function template_html_above()
 
 //	 The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
+	<meta author="hector">
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
@@ -98,14 +99,14 @@ function template_html_above()
 //	if ($context['right_to_left'])
 //		echo '
 //	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
-//    echo '
-//	    <link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/main.css" />';
+    echo '
+	    <link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index2.css" />';
 
 
 	// Here comes the JavaScript bits!
 	echo '
-	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/script.js?fin20"></script>
-	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/theme.js?fin20"></script>
+	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/script.js?fin20"></script>',
+	'<script type="text/javascript" src="', $settings['theme_url'], '/scripts/theme.js?fin20"></script>
 	<script type="text/javascript"><!-- // --><![CDATA[
 		var smf_theme_url = "', $settings['theme_url'], '";
 		var smf_default_theme_url = "', $settings['default_theme_url'], '";
@@ -137,7 +138,8 @@ function template_html_above()
 	// Present a canonical url for search engines to prevent duplicate content in their indices.
 	if (!empty($context['canonical_url']))
 		echo '
-	<link rel="canonical" href="', $context['canonical_url'], '" />';
+	<link rel="canonical" href="', $context['canonical_url'], '" />
+	<link rel="shortcut icon" href="', $settings['images_url'], '/favicon.ico" />';
 
 	// Show all the relative links, such as help, search, contents, and the like.
 	echo '
@@ -172,22 +174,33 @@ function template_html_above()
 function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
-
-	echo !empty($settings['forum_width']) ? '
-<div id="wrapper" style="width: ' . $settings['forum_width'] . '">' : '', '
+    echo '
+        <div class="top">
+            <div class="top-container">
+                <div class="ip">
+                    TS3: ts.diquemc.com
+                </div>
+                <div class="ip">
+                    IP: mc.diquemc.com
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-container">',
+                template_menu(),
+            '</div>
+        </div>
+        <div class="image">';
+        	echo '
 	<div id="header"><div class="frame">
 		<div id="top_section">
 			<h1 class="forumtitle">
-				<a href="', $scripturl, '">', empty($context['header_logo_url_html_safe']) ? $context['forum_name'] : '<img src="' . $context['header_logo_url_html_safe'] . '" alt="' . $context['forum_name'] . '" />', '</a>
+                <img id="smflogo" src="' . $settings['images_url'] . '/smflogo.png" alt="Foro Dique MC" title="Foro Dique MC" />
 			</h1>';
 
-	// the upshrink image, right-floated
-	echo '
-			<img id="upshrink" src="', $settings['images_url'], '/upshrink.png" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />';
-	echo '
-			', empty($settings['site_slogan']) ? '<img id="smflogo" src="' . $settings['images_url'] . '/smflogo.png" alt="Simple Machines Forum" title="Simple Machines Forum" />' : '<div id="siteslogan" class="floatright">' . $settings['site_slogan'] . '</div>', '
-		</div>
-		<div id="upper_section" class="middletext"', empty($options['collapse_header']) ? '' : ' style="display: none;"', '>
+	echo
+		'</div>
+		<div id="upper_section" class="middletext">
 			<div class="user">';
 
 	// If the user is logged in, display stuff like their name, new messages, etc.
@@ -224,8 +237,8 @@ function template_body_above()
 	elseif (!empty($context['show_login_bar']))
 	{
 		echo '
-				<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/sha1.js"></script>
-				<form id="guest_form" action="', $scripturl, '?action=login2" method="post" accept-charset="', $context['character_set'], '" ', empty($context['disable_login_hashing']) ? ' onsubmit="hashLoginPassword(this, \'' . $context['session_id'] . '\');"' : '', '>
+				<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/sha1.js"></script>',
+				'<form id="guest_form" action="', $scripturl, '?action=login2" method="post" accept-charset="', $context['character_set'], '" ', empty($context['disable_login_hashing']) ? ' onsubmit="hashLoginPassword(this, \'' . $context['session_id'] . '\');"' : '', '>
 					<div class="info">', sprintf($txt['welcome_guest'], $txt['guest_title']), '</div>
 					<input type="text" name="user" size="10" class="input_text" />
 					<input type="password" name="passwrd" size="10" class="input_password" />
@@ -310,14 +323,26 @@ function template_body_above()
 		// ]]></script>';
 
 	// Show the menu here, according to the menu sub template.
-	template_menu();
+
 
 	echo '
 		<br class="clear" />
 	</div></div>';
 
+
+            echo '<div class="social fb">
+                <a href="https://www.facebook.com/DiqueMC" target="_blank">
+                    <img src="', $settings['images_url'],'/assets/fb.png">
+                </a>
+            </div>
+
+        </div>';
+
+
 	// The main content should go here.
-	echo '
+	echo  !empty($settings['forum_width']) ? '
+	<div id="wrapper" style="width: ' . $settings['forum_width'] . '">' : '','
+
 	<div id="content_section"><div class="frame">
 		<div id="main_content_section">';
 
@@ -414,16 +439,16 @@ function template_menu()
 	global $context, $settings, $options, $scripturl, $txt;
 
 	echo '
-		<div id="main_menu">
-			<ul class="dropmenu" id="menu_nav">';
+			<ul class="dropmenu2" id="menu_nav">';
 
-	foreach ($context['menu_buttons'] as $act => $button)
+	foreach (array_reverse($context['menu_buttons']) as $act => $button)
 	{
 		echo '
 				<li id="button_', $act, '">
-					<a class="', $button['active_button'] ? 'active ' : '', 'firstlevel" href="', $button['href'], '"', isset($button['target']) ? ' target="' . $button['target'] . '"' : '', '>
-						<span class="', isset($button['is_last']) ? 'last ' : '', 'firstlevel">', $button['title'], '</span>
-					</a>';
+					<a class="', $button['active_button'] ? 'active ' : '', 'firstlevel" href="', $button['href'], '"', isset($button['target']) ? ' target="' . $button['target'] . '"' : '', '>',
+						'<span class="', isset($button['is_last']) ? 'last ' : '', 'firstlevel">', $button['title'], '</span>',
+//                    $button['title'],
+					'</a>';
 		if (!empty($button['sub_buttons']))
 		{
 			echo '
@@ -466,7 +491,7 @@ function template_menu()
 
 	echo '
 			</ul>
-		</div>';
+		';
 }
 
 // Generate a strip of buttons.
