@@ -3,6 +3,14 @@
 define "PagesController", ['require','jquery','Backbone'],(require) ->
   Backbone = require("Backbone")
   $ = require("jquery")
+
+  class Page404 extends  Backbone.View
+
+    render: ->
+      @trigger 'errorLoading',  {message: "Section not found", code: 404}
+      @$el.html JST["views/templates/404"]()
+      @$el
+
   class Page extends Backbone.View
 
     load: ->
@@ -28,7 +36,10 @@ define "PagesController", ['require','jquery','Backbone'],(require) ->
   return {
 
     getPage:(pageName) ->
+      if /404/.test pageName
+        return new Page404()
       unless  pageName
         pageName = "home"
+
       return new Page section: pageName
   }

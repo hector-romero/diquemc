@@ -22,3 +22,5 @@ To run the local development server, just run:
 To build the static application:
 
     $ rake build
+
+

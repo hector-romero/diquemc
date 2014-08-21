@@ -87,6 +87,13 @@ function template_html_above()
 //	 The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
 	<meta author="hector">
+	<!-- Open graph tags -->
+	<meta property="og:image" content="http://diquemc.com/assets/diquemc.png"/>
+	<meta property="og:url" content="http://foro.diquemc.com/"/>
+	<meta property="og:title" content="Foro Dique MC"/>
+	<meta property="og:description" content="Foro oficial de la comunidad Dique MC. El lugar ideal para hablar del juego."/>
+
+
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
@@ -211,7 +218,7 @@ function template_body_above()
 				<p class="avatar">', $context['user']['avatar']['image'], '</p>';
 		echo '
 				<ul class="reset">
-					<li class="greeting">', $txt['hello_member_ndt'], ' <span>', $context['user']['name'], '</span></li>
+					<li class="greeting">', $txt['hello_member_ndt'], ' <span>', $context['user']['name'], '!</span></li>
 					<li><a href="', $scripturl, '?action=unread">', $txt['unread_since_visit'], '</a></li>
 					<li><a href="', $scripturl, '?action=unreadreplies">', $txt['show_unread_replies'], '</a></li>';
 
