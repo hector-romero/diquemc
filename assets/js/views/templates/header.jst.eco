@@ -1,8 +1,8 @@
 <ul>
-        <li class="descargas"><a href="#descargas">ÚTILES</a></li>
-        <li class="donacion"><a href="#donacion">DONACIÓN</a></li>
+        <li class="descargas"><a href="/#descargas">ÚTILES</a></li>
+        <li class="donacion"><a href="/#donacion">DONACIÓN</a></li>
         <li class="unirse"><a href="http://foro.diquemc.com" target="_blank">FORO</a></li>
-        <li class="noticias"><a href="#noticias">NOTICIAS</a></li>
-        <li class="comunidad"><a href="#comunidad">COMUNIDAD</a></li>
-        <li class="home"><a href="#">Home</a></li>
+        <li class="noticias"><a href="/#noticias">NOTICIAS</a></li>
+        <li class="reglas"><a href="/#reglas">REGLAS</a></li>
+        <li class="home"><a href="/#">Home</a></li>
 </ul>

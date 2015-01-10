@@ -18,6 +18,8 @@ class App < Sinatra::Base
   set :main_css,        'main.css'
   set :index,           :index
   set :use_key,         :debug
+  Rack::Mime::MIME_TYPES['.php'] = 'text/html'
+
 
   def self.reconfigure(options = {})
     options = {:debug_assets => development?}.merge(options)

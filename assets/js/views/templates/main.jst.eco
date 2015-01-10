@@ -2,9 +2,9 @@
 <div class="spinner"></div>
 <br>
 <h2>Secciones</h2>
-<a href="#comunidad">
+<a href="#reglas">
     <div class="service-half hyper">
-        <div class="caption">COMUNIDAD</div>
+        <div class="caption">REGLAS</div>
         <div class="caption small">Mira las Reglas!</div>
     </div>
 

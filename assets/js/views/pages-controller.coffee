@@ -12,6 +12,10 @@ define "PagesController", ['require','jquery','Backbone'],(require) ->
       @$el
 
   class Page extends Backbone.View
+    className: 'page'
+
+    asset: ->
+      "assets/#{@section}.php"
 
     load: ->
       @trigger 'startLoading'
@@ -23,7 +27,7 @@ define "PagesController", ['require','jquery','Backbone'],(require) ->
         @$el.html JST["views/templates/404"]()
         @trigger 'errorLoading',  {message: "Section not found", code: 404}
 
-      $.ajax("assets/#{@section}.html").then success,error
+      $.ajax(@asset()).then success,error
 
     render: ->
       @$el.html ""
@@ -31,7 +35,8 @@ define "PagesController", ['require','jquery','Backbone'],(require) ->
       @$el
 
     initialize: (options)->
-      @section = options.section
+      if(options)
+        @section = options.section
 
   return {
 
